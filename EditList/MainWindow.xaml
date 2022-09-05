@@ -1,0 +1,19 @@
+﻿<Window x:Class="EditList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EditList"
+        mc:Ignorable="d"       
+        Title="MainWindow" Height="480" Width="800" Background="LightGreen">
+    <StackPanel>
+            <TextBox  x:Name="Extract"  Height="280" Width="600"  Margin="0,20,0,0"  Text="{Binding ElementName=Questions,Path=Text, Mode =OneWay}" Background="LightYellow" TextChanged="Extract_TextChanged_1"/>
+        <Button x:Name="Import" Content="Import questions"  Height="40" Width="150"  Margin="100,20,0,0" HorizontalAlignment="Left" Background="LightYellow" FontSize="13" FontWeight="Bold" Click="Check_Click_Import"></Button>
+        <Button x:Name="Save" Content="Save Item"  Height="40" Width="100"  Margin="0,-40,0,0" HorizontalAlignment="Center" Background="LightYellow" FontSize="13" FontWeight="Bold" Click="Check_Click_Save"></Button>
+        <Button x:Name="Export" Content="Export questions"  Height="40" Width="150"  Margin="0,-40,100,0" HorizontalAlignment="Right" Background="LightYellow" FontSize="13" FontWeight="Bold" Click="Check_Click_Export"></Button>
+        <ComboBox x:Name="Questions" Height="60" Width="600"  SelectionChanged="ComboBox_Selected"  Margin="77,10,77,167" Background="LightYellow" FontSize="13" FontWeight="Bold">
+                <ComboBoxItem  IsSelected="True" />
+            </ComboBox>
+        </StackPanel>
+
+</Window>
